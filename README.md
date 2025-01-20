@@ -10,7 +10,7 @@ A batch script designed to delete temporary files and clean Windows cache direct
 
 ## How to Use
 1. **Download** the `cache_cleaner.bat` script.
-2. **Run the script** by double-clicking it. 
+2. **Run the script** with **administrative privileges**. 
 3. Follow the prompts to confirm the deletion of temporary files.
 
 ## Script Details
@@ -40,17 +40,19 @@ A batch script designed to delete temporary files and clean Windows cache direct
 ```
 
 ### Commands Breakdown
-- `@echo off`: Hides command execution in the script.
-- `pause`: Waits for user input before proceeding.
-- `color 2`: Changes the text color to green.
+- `@echo off`: used to hide the commands from the user
+- `@echo`: used to display the text on the screen
+- `@echo.`: used to display a blank line
+- `set /p`: used to set the value of a variable
+- `/I`: switch is used to make the comparison case-insensitive
+- `colour 2`: Changes the text colour to green.
 - `Del /S /F /Q`: Deletes files forcefully and quietly from specified directories.
+- `2>nul`: is used to suppress error messages.
 
 ## Note
 - Run this script with **administrative privileges** to ensure it has the necessary permissions to delete system files.
 - Be cautious when running scripts that delete system files to avoid unintentional data loss.
 
-## License
-This project is open-source and available under the MIT License. See the `LICENSE` file for more details.
 
 ## Author
 [SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)
